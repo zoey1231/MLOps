@@ -1,4 +1,4 @@
-churn_model
+MLOps
 ==============================
 
 end to end ML pipeline with MLOps tools
