@@ -22,6 +22,7 @@ input_data = {
     "total_eve_charge": 12, 
     "total_intl_minutes": 1, 
     "number_customer_service_calls": 4, 
+    
     }
 }
 
