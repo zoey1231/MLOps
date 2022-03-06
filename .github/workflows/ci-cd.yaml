@@ -32,8 +32,8 @@ jobs:
     - name: Remove previous heroku builds
       run: |
         heroku plugins:install heroku-builds
-        $ heroku builds:cancel
-        $ heroku restart
+        heroku builds:cancel
+        heroku restart
     - name: Deploy to Heroku
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
