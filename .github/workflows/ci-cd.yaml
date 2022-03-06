@@ -29,19 +29,7 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Heroku login credentials
-      run: |
-          cat > ~/.netrc <<EOF
-            machine api.heroku.com
-              login ${{secrets.HEROKU_EMAIL}}
-              password ${{secrets.HEROKU_API_TOKEN}}
-            machine git.heroku.com
-              login ${{secrets.HEROKU_EMAIL}}
-              password ${{secrets.HEROKU_API_TOKEN}}
-          EOF
-      env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+    
     - name: Remove previous heroku builds
       run: |
         heroku plugins:install heroku-builds
