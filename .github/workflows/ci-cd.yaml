@@ -44,7 +44,7 @@ jobs:
           HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
     - name: Remove previous heroku builds
       run: |
-        
+        heroku plugins:install heroku-builds
         heroku builds:cancel -a ${{secrets.HEROKU_API_NAME}}
         heroku restart
     - name: Deploy to Heroku
