@@ -39,9 +39,7 @@ jobs:
               login ${{secrets.HEROKU_EMAIL}}
               password ${{secrets.HEROKU_API_TOKEN}}
           EOF
-      env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+
     - name: Remove previous heroku builds
       run: |
         heroku plugins:install heroku-builds
