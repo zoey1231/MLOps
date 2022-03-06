@@ -1,7 +1,6 @@
 MLOps
 ==============================
 
-end to end ML pipeline with MLOps tools
 
 Project Organization
 ------------
