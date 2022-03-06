@@ -46,7 +46,7 @@ jobs:
       run: |
         heroku plugins:install heroku-builds
         heroku builds:cancel -a ${{secrets.HEROKU_API_NAME}}
-        heroku restart
+        heroku restart -a ${{secrets.HEROKU_API_NAME}}
     - name: Deploy to Heroku
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
